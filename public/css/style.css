@@ -6,6 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  height: 100vh;
 }
 /* ALL COLOR */
 :root {
@@ -20,11 +21,11 @@ body {
 /* STYEL NAV BARE */
 nav {
   padding: 10px;
+  padding-inline: 30px;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-
 .btn-book , .btn-tabale-about {
   color: var(--backgrandColor);
   background-color: var(--colorPrice);
@@ -44,10 +45,113 @@ nav {
 .links a {
   text-decoration: none;
   color: var(--darkgray);
+  position: relative;
+
+  
+
 }
+
+.links a::after{
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 3px;
+  color: #df1529;
+  top: 0;
+  left: 0;
+}
+
+
 .logo {
   color: var(--darkblue);
 }
 .logo span {
   color: #ce1212;
+}
+/* STYEL SECTION ABOUT */
+
+.about{
+  display: grid;
+  grid-template-columns: 40% 30%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: var(--backgrandColor);
+  height: 70%;
+}
+
+.btn-about{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+}
+
+.content-about{
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+}
+
+.content{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.round-play{
+  width: 50px;
+  height: 50px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 3px solid var(--darkorange);
+}
+.round-play i{
+  color: var(--colorPrice);
+}
+.play-vedio{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.play-vedio a{
+  text-decoration: none;
+  color:var(--darkblue);
+  transition: all 0.4s ease-in-out;
+}
+.play-vedio a:hover{
+  color: #df1529;
+  
+}
+.img-about img{
+  width: 100%;
+   
+}
+
+.content h1{
+  
+  color: var(--darkblue);
+  font-family: "Amatic SC", sans-serif;
+  font-size: 50px;
+}
+.content h4{
+  font-weight: 300;
+  color: var(--darkgray);
+  
+}
+
+.up-down {
+  animation: up-down 3s ease-in-out infinite  alternate-reverse both;
+}
+
+@keyframes up-down {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    transform: translateY(-10px);
+  }
 }
