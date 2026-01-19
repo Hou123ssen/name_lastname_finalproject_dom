@@ -16,6 +16,7 @@ body {
   --yellowColor: #ffc107;
   --colorPrice: #ce1212;
   --backgrandColor: #f2f2f2;
+  --fontAmntic: "Amatic SC", sans-serif;
 }
 
 /* STYEL NAV BARE */
@@ -26,7 +27,8 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-.btn-book , .btn-tabale-about {
+.btn-book,
+.btn-tabale-about {
   color: var(--backgrandColor);
   background-color: var(--colorPrice);
   border-radius: 10px;
@@ -46,12 +48,9 @@ nav {
   text-decoration: none;
   color: var(--darkgray);
   position: relative;
-
-  
-
 }
 
-.links a::after{
+.links a::after {
   content: "";
   position: absolute;
   width: 20px;
@@ -61,7 +60,6 @@ nav {
   left: 0;
 }
 
-
 .logo {
   color: var(--darkblue);
 }
@@ -70,7 +68,7 @@ nav {
 }
 /* STYEL SECTION ABOUT */
 
-.about{
+.about {
   display: grid;
   grid-template-columns: 40% 30%;
   justify-content: center;
@@ -80,26 +78,25 @@ nav {
   height: 70%;
 }
 
-.btn-about{
+.btn-about {
   display: flex;
   align-items: center;
   gap: 10px;
-  
 }
 
-.content-about{
-   display: flex;
-   flex-direction: column;
-   gap: 30px;
+.content-about {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-.content{
+.content {
   width: 50%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.round-play{
+.round-play {
   width: 50px;
   height: 50px;
   padding: 10px;
@@ -109,42 +106,38 @@ nav {
   border-radius: 50%;
   border: 3px solid var(--darkorange);
 }
-.round-play i{
+.round-play i {
   color: var(--colorPrice);
 }
-.play-vedio{
+.play-vedio {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-.play-vedio a{
+.play-vedio a {
   text-decoration: none;
-  color:var(--darkblue);
+  color: var(--darkblue);
   transition: all 0.4s ease-in-out;
 }
-.play-vedio a:hover{
+.play-vedio a:hover {
   color: #df1529;
-  
 }
-.img-about img{
+.img-about img {
   width: 100%;
-   
 }
 
-.content h1{
-  
+.content h1 {
   color: var(--darkblue);
-  font-family: "Amatic SC", sans-serif;
+  font-family: var(--fontAmntic);
   font-size: 50px;
 }
-.content h4{
+.content h4 {
   font-weight: 300;
   color: var(--darkgray);
-  
 }
 
 .up-down {
-  animation: up-down 3s ease-in-out infinite  alternate-reverse both;
+  animation: up-down 3s ease-in-out infinite alternate-reverse both;
 }
 
 @keyframes up-down {
@@ -155,3 +148,123 @@ nav {
     transform: translateY(-10px);
   }
 }
+
+/* STYLE ABOUT US */
+
+.about-us {
+  display: grid;
+  grid-template-rows: 20% 1fr;
+  height: 100%;
+
+}
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.title h5 {
+  color: var(--darkgray);
+}
+.title h1 {
+  font-family: var(--fontAmntic);
+}
+.title span {
+  color: var(--darkorange);
+}
+
+.content-img-about-us {
+  display: grid;
+  grid-template-columns: 45% 30%;
+  gap: 20px;
+  justify-content: center;
+  
+}
+.img-about-us {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.num-book-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 7px solid var(--darkblue);
+  width: 100%;
+  height: 20%;
+}
+.num-book-table .num{
+  color: #ce1212;
+  font-size: 40px;
+}
+.num-book-table h1{
+  font-size: 40px;
+}
+.img-about-us img{
+  width: 100%;
+  
+}
+ .icone-check{
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  width: 30px;
+  height: 30px;
+  background-color: var(--darkorange);
+}
+.icone-check i{
+  color: var(--backgrandColor);
+}
+.firstP {
+  color: var(--darkgray);
+}
+.para-us{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.content-about-us {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  
+}
+
+.img-play {
+  width: 100%;
+  height: 100%;
+  background-image: url("/public/img/about-2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.img-play div{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--darkorange);
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  transform: translateX(-50% , -50%);
+}
+
+.img-play div i {
+  color: var(--backgrandColor);
+}
+.card {
+  display: grid;
+  grid-template-columns: 30% 1fr 1fr 1fr;
+}
+
