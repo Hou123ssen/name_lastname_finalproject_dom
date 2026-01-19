@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* ALL COLOR */
+:root {
+  --darkorange: #df1529;
+  --darkgray: rgb(55, 55, 63);
+  --darkblue: #212529;
+  --yellowColor: #ffc107;
+  --colorPrice: #ce1212;
+  --backgrandColor: #f2f2f2;
+}
+
+/* STYEL NAV BARE */
+nav {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btn-book , .btn-tabale-about {
+  color: var(--backgrandColor);
+  background-color: var(--colorPrice);
+  border-radius: 10px;
+  width: 100px;
+  border: none;
+  padding: 8px;
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--darkgray);
+}
+.logo {
+  color: var(--darkblue);
+}
+.logo span {
+  color: #ce1212;
+}
