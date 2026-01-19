@@ -11,12 +11,15 @@ body {
 /* ALL COLOR */
 :root {
   --darkorange: #df1529;
+  --lightorange: #fcf3f3;
   --darkgray: rgb(55, 55, 63);
   --darkblue: #212529;
   --yellowColor: #ffc107;
   --colorPrice: #ce1212;
   --backgrandColor: #f2f2f2;
   --fontAmntic: "Amatic SC", sans-serif;
+  --backgrondWhite: white;
+  --lightWhite : rgba(255, 255, 255, 0.63);
 }
 
 /* STYEL NAV BARE */
@@ -97,8 +100,8 @@ nav {
   gap: 10px;
 }
 .round-play {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   padding: 10px;
   display: flex;
   align-items: center;
@@ -154,8 +157,7 @@ nav {
 .about-us {
   display: grid;
   grid-template-rows: 20% 1fr;
-  height: 100%;
-
+  height: 128%;
 }
 .title {
   display: flex;
@@ -180,7 +182,6 @@ nav {
   grid-template-columns: 45% 30%;
   gap: 20px;
   justify-content: center;
-  
 }
 .img-about-us {
   display: flex;
@@ -197,18 +198,17 @@ nav {
   width: 100%;
   height: 20%;
 }
-.num-book-table .num{
+.num-book-table .num {
   color: #ce1212;
   font-size: 40px;
 }
-.num-book-table h1{
+.num-book-table h1 {
   font-size: 40px;
 }
-.img-about-us img{
+.img-about-us img {
   width: 100%;
-  
 }
- .icone-check{
+.icone-check {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -217,13 +217,13 @@ nav {
   height: 30px;
   background-color: var(--darkorange);
 }
-.icone-check i{
+.icone-check i {
   color: var(--backgrandColor);
 }
 .firstP {
   color: var(--darkgray);
 }
-.para-us{
+.para-us {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -233,7 +233,6 @@ nav {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  
 }
 
 .img-play {
@@ -246,7 +245,7 @@ nav {
   position: relative;
 }
 
-.img-play div{
+.img-play div {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -257,14 +256,121 @@ nav {
   position: absolute;
   top: 40%;
   left: 40%;
-  transform: translateX(-50% , -50%);
+  transform: translateX(-50%, -50%);
 }
 
 .img-play div i {
   color: var(--backgrandColor);
 }
+/* SECTION CARD */
 .card {
+  height: auto;
   display: grid;
-  grid-template-columns: 30% 1fr 1fr 1fr;
+  padding: 40px;
+  background-color: var(--backgrandColor);
+  grid-template-columns: 27% 17% 17% 17%;
+  gap: 20px;
+  justify-content: center;
 }
 
+.card-first {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--backgrandColor);
+  background-color: var(--darkorange);
+  gap: 40px;
+  padding: 10px;
+}
+
+.btn-card {
+  border: none;
+  background-color: var(--colorPrice);
+  border-radius: 8px;
+  padding: 20px;
+  color: var(--backgrondWhite);
+}
+
+.btn-card:hover {
+  color: var(--darkorange);
+  background-color: var(--backgrondWhite);
+}
+.content-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 15px;
+  padding: 30px;
+  background-color: var(--backgrondWhite);
+}
+
+.content-card div {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: var(--lightorange);
+}
+.content-card div i {
+  font-size: 30px;
+  color: var(--colorPrice);
+}
+
+.content-card div:hover {
+  color: var(--backgrondWhite);
+  background-color: var(--darkorange);
+}
+
+.content-card div i:hover {
+  color: var(--backgrondWhite);
+}
+
+.content-card h3 {
+  color: var(--darkblue);
+}
+.content-card p {
+  font-weight: 400;
+  color: var(--darkgray);
+}
+
+/* STAYLE STATUS */
+.status {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  height: 60%;
+  width: 100%;
+  background: url("/public/img/stats-bg.jpg") center / cover no-repeat;
+}
+.status::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: var(--darkblue);
+  opacity: 0.7;
+}
+.status div{
+  position: relative;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.status h1{
+  color: var(--backgrondWhite);
+  
+}
+.status p{
+  color: var(--lightWhite);
+}
