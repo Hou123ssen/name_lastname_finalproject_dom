@@ -19,7 +19,8 @@ body {
   --backgrandColor: #f2f2f2;
   --fontAmntic: "Amatic SC", sans-serif;
   --backgrondWhite: white;
-  --lightWhite : rgba(255, 255, 255, 0.63);
+  --lightWhite: rgba(255, 255, 255, 0.63);
+  --mediumWhite: rgb(207, 207, 207);
 }
 
 /* STYEL NAV BARE */
@@ -169,8 +170,10 @@ nav {
 
 .title h5 {
   color: var(--darkgray);
+  font-weight: 300;
 }
 .title h1 {
+  font-size: 60px;
   font-family: var(--fontAmntic);
 }
 .title span {
@@ -360,17 +363,226 @@ nav {
   background-color: var(--darkblue);
   opacity: 0.7;
 }
-.status div{
+.status div {
   position: relative;
   z-index: 9999;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.status h1{
+.status h1 {
   color: var(--backgrondWhite);
-  
 }
-.status p{
+.status p {
   color: var(--lightWhite);
+}
+
+/* STYLE MENU */
+
+.menu {
+  display: grid;
+  grid-template-rows: 20% 10% 1fr;
+  height: 100%;
+}
+
+.filter-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.filter-menu div h2 {
+  font-weight: 300;
+  color: var(--darkgray);
+}
+.filter-menu div {
+  padding-bottom: 7px;
+}
+.title-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 8px;
+}
+.title-menu p {
+  color: var(--darkgray);
+}
+.title-menu h1 {
+  color: var(--darkorange);
+  font-family: var(--fontAmntic);
+}
+.type-food {
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+.top-food,
+.bottom-food {
+  display: grid;
+  width: 100%;
+  justify-content: center;
+  grid-template-columns: 30% 30% 30%;
+}
+
+.top-food div,
+.bottom-food div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.top-food div img,
+.bottom-food div img {
+  width: 35%;
+}
+
+.food-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+
+.top-food div h1,
+.bottom-food div h1 {
+  color: var(--darkblue);
+  font-weight: 600;
+}
+.top-food div p,
+.bottom-food div p {
+  color: var(--darkgray);
+}
+.top-food div span,
+.bottom-food div span {
+  color: var(--colorPrice);
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.food-item {
+  transition: all 0.4s ease;
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+}
+
+.choose {
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.choose.active {
+  color: var(--darkgray);
+  justify-content: start;
+  align-items: start;
+  border-bottom: 3px solid var(--colorPrice);
+}
+
+/* SYTLE testimonials  */
+
+.carousel {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+.testimonials {
+  margin-top: 30vh;
+  background-color: var(--backgrandColor);
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 20% 1fr;
+}
+
+.slide {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: none;
+  justify-content: center;
+  font-size: 20px;
+  flex-direction: column;
+  gap: 10px;
+}
+.slide::after {
+  content: "";
+  width: 7px;
+  height: 400px;
+  position: absolute;
+  background-color: var(--colorPrice);
+  left: -20px;
+}
+
+.slide.active {
+  display: flex;
+}
+.test-1 {
+  display: flex;
+  gap: 7px;
+}
+.test-1 h2 {
+  color: var(--darkblue);
+}
+.test-1 img {
+  border-radius: 50%;
+  width: 20%;
+}
+.test-1 h3 i {
+  color: var(--colorPrice);
+}
+.stars {
+  display: flex;
+
+  gap: 7px;
+}
+.stars i {
+  color: var(--yellowColor);
+}
+
+.person p {
+  font-size: 40px;
+
+  font-family: var(--fontAmntic);
+}
+.person span {
+  font-weight: 400;
+}
+.test-1 i {
+  color: var(--darkorange);
+}
+.person {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.tab-btn {
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--mediumWhite);
+}
+.tab-btn.active {
+  background-color: var(--colorPrice);
+}
+
+.tabs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  gap: 20px;
 }
