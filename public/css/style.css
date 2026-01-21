@@ -59,7 +59,7 @@ nav {
   position: absolute;
   width: 20px;
   height: 3px;
-  color: #df1529;
+  color: var(--colorPrice);
   top: 0;
   left: 0;
 }
@@ -68,7 +68,7 @@ nav {
   color: var(--darkblue);
 }
 .logo span {
-  color: #ce1212;
+  color: var(--colorPrice);
 }
 /* STYEL SECTION ABOUT */
 
@@ -124,7 +124,7 @@ nav {
   transition: all 0.4s ease-in-out;
 }
 .play-vedio a:hover {
-  color: #df1529;
+  color: var(--colorPrice);
 }
 .img-about img {
   width: 100%;
@@ -202,7 +202,7 @@ nav {
   height: 20%;
 }
 .num-book-table .num {
-  color: #ce1212;
+  color: var(--darkorange);
   font-size: 40px;
 }
 .num-book-table h1 {
@@ -240,7 +240,7 @@ nav {
 
 .img-play {
   width: 100%;
-  height: 100%;
+  height: 50%;
   background-image: url("/public/img/about-2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -709,7 +709,7 @@ nav {
   gap: 30px;
 }
 
-.card {
+.Card {
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
@@ -748,7 +748,7 @@ nav {
   flex-direction: column;
   gap: 20px;
 }
-.card {
+.Card {
   width: 80%;
   height: 100%;
   display: flex;
@@ -758,12 +758,12 @@ nav {
   overflow: hidden;
   transition: all 0.4s ease-in-out;
 }
-.card:hover .socila-media{
-   right: 10px;
+.Card:hover .socila-media {
+  right: 10px;
 }
 
-.card:hover{
-   transform: scale(1.2);
+.Card:hover {
+  transform: scale(1.2);
 }
 .socila-media {
   width: auto;
@@ -783,10 +783,581 @@ nav {
   transition: all 0.4s ease-in-out;
 }
 .socila-media i:hover {
-  
   color: var(--darkblue);
 }
 
 .socila-media i {
   font-size: 15px;
 }
+/* SECTION BOOK TABEL */
+.reservation {
+  display: grid;
+  grid-template-rows: 20% 1fr;
+  gap: 20px;
+  height: 100%;
+}
+.reservation {
+  padding: 60px 0;
+}
+
+.reservation-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+  background-color: var(--backgrandColor);
+}
+
+.reservation-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reservation-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.reservation-form input,
+.reservation-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.reservation-form textarea {
+  resize: none;
+  height: 120px;
+}
+.reservation-form {
+  padding: 22px;
+}
+.reservation-form button {
+  width: 200px;
+  padding: 14px;
+  background: var(--colorPrice);
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin: auto;
+  border-radius: 4px;
+}
+
+.reservation-form button:hover {
+  background: var(--colorPrice);
+}
+
+/* STYEL GALLERY */
+.gallery {
+  display: grid;
+  grid-template-rows: 20% 1fr;
+  gap: 20px;
+  height: 90vh;
+  background-color: var(--backgrandColor);
+}
+.all-gallery {
+  overflow: hidden;
+  display: flex;
+  gap: 20px;
+}
+
+.gallery {
+  padding: 80px 0;
+}
+
+.all-gallery {
+  position: relative;
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.all-gallery > div {
+  position: absolute;
+  transition:
+    transform 0.6s ease,
+    opacity 0.6s ease;
+}
+
+.all-gallery img {
+  width: 260px;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+/* SYTLE CONTACT */
+.contact-us {
+  display: grid;
+  grid-template-rows: 20% 1fr;
+  width: 100%;
+  padding: 60px 8%;
+  gap: 20px;
+  background: var(--backgrondWhite);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 80%;
+}
+.center-contact {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.info-box {
+  background: #fff;
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  background: var(--colorPrice);
+  color: var(--backgrondWhite);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.info-box h3 {
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+
+.info-box p {
+  color: #555;
+  font-size: 15px;
+}
+
+.contact-form {
+  background: #fff;
+  padding: 35px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form .row {
+  display: flex;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+  font-size: 15px;
+}
+
+.contact-form textarea {
+  height: 150px;
+  resize: none;
+}
+
+.contact-form button {
+  display: block;
+  margin: auto;
+  padding: 14px 35px;
+  background: var(--colorPrice);
+  color: var(--backgrondWhite);
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+/* STYLE FOOTER */
+
+.footer {
+  background: var(--darkblue);
+  color: var(--backgrondWhite);
+  padding: 60px 8% 30px;
+  position: relative;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-box {
+  display: flex;
+  gap: 15px;
+}
+
+.footer-box i {
+  font-size: 30px;
+  color: var(--colorPrice);
+}
+
+.footer-box h1 {
+  margin-bottom: 8px;
+}
+.footer-box {
+  display: flex;
+  flex-direction: column;
+}
+.footer-box p {
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.socials a {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #555;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ccc;
+  transition: 0.3s;
+  text-decoration: none;
+  padding: 20px;
+}
+
+.socials a:hover {
+  color: #fff;
+  border-color: var(--colorPrice);
+}
+
+hr {
+  margin: 40px 0 25px;
+  border: none;
+  height: 1px;
+  background: var(--darkblue);
+}
+
+.footer-bottom {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--backgrondWhite);
+}
+
+.footer-bottom span {
+  color: var(--colorPrice);
+}
+
+.scroll-top {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  width: 45px;
+  height: 45px;
+  background: var(--colorPrice);
+  border: none;
+  border-radius: 50%;
+  color: var(--backgrandColor);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* RESPNSIVE */
+
+@media (max-width: 768px) {
+  nav {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: white;
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .links.active {
+    display: flex;
+  }
+
+  .btn-book {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    grid-template-columns: 1fr;
+    text-align: center;
+    height: auto;
+    padding: 40px 20px;
+    padding: 60px;
+  }
+
+  .content {
+    width: 100%;
+  }
+  .content-about {
+    padding: 20px;
+  }
+  .img-about img {
+    width: 70%;
+    margin: auto;
+  }
+
+  .btn-about {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .content-img-about-us {
+    grid-template-columns: 1fr;
+    padding: 50px;
+  }
+
+  .num-book-table {
+    height: auto;
+    padding: 20px;
+  }
+  .about {
+    padding: 50px;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .top-food,
+  .bottom-food {
+    display: unset;
+  }
+
+  .top-food img,
+  .bottom-food img {
+    width: 50%;
+  }
+  .menu {
+    height: auto;
+    grid-template-rows: 5% 5% 1fr;
+    gap: 10px;
+    padding: unset;
+  }
+  .filter-menu {
+    height: auto;
+    gap: unset;
+  }
+
+  .top-food,
+  .bottom-food {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: auto;
+  }
+  .food-item {
+    width: 100%;
+  }
+  .type-food {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .food-menu {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    width: 90%;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .test-1 {
+    text-align: center;
+    justify-content: center;
+
+    display: unset;
+  }
+
+  .test-1 img {
+    width: 40%;
+  }
+  .testimonials {
+    margin-top: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-events {
+    width: 400%;
+  }
+
+  .event-1,
+  .event-2,
+  .event-3,
+  .event-4 {
+    max-width: 22.9%;
+  }
+}
+@media (max-width: 1333px) {
+  .content-events {
+    width: 200%;
+  }
+
+  .event-1,
+  .event-2,
+  .event-3,
+  .event-4 {
+    max-width: 30%;
+  }
+}
+
+@media (max-width: 992px) {
+  .chaf {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .team {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+  .Card {
+    width: 70%;
+  }
+}
+
+@media (max-width: 1333px) {
+  .chaf {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+   .team {
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: auto;
+  }
+  .testimonials{
+    margin: unset;
+  }
+}
+
+@media (max-width: 480px) {
+  .team {
+    grid-template-columns: 1fr;
+  }
+
+  .Card:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .reservation {
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .reservation-container {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .all-gallery img {
+    width: 180px;
+    height: 240px;
+  }
+  .gallery {
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-info {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form .row {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-box {
+    align-items: center;
+  }
+}
+
+
+
