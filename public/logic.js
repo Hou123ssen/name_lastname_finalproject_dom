@@ -72,3 +72,32 @@ buttons.forEach((btn) => {
   });
 });
 
+// EVENT : 
+
+const Slider = document.querySelector(".content-events");
+const Slides = document.querySelectorAll(".content-events > div");
+
+let index = 0;
+const slideWidth = slides[0].offsetWidth;
+const total = slides.length;
+
+
+const firstClone = Slides[0].cloneNode(true);
+Slider.appendChild(firstClone);
+
+function moveSlider() {
+  index++;
+  Slider.style.transition = "transform 0.8s ease";
+  Slider.style.transform = `translateX(-${index * slideWidth}px)`;
+
+ 
+  if (index === total) {
+    setTimeout(() => {
+      Slider.style.transition = "none";
+      index = 0;
+      Slider.style.transform = "translateX(0)";
+    }, 800);
+  }
+}
+
+setInterval(moveSlider, 2500);
